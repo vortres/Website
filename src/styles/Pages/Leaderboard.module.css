@@ -1,0 +1,83 @@
+/* Leaderboard container */
+.lb_Container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 26px;
+}
+
+/* Leaderboard heading */
+.lb_Heading {
+  font-size: 36px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  padding: 26px;
+  padding-top: 76px;
+  color: var(--color-text-light);
+}
+
+/* Leaderboard table */
+.lb_Table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--color-light-dark);
+}
+
+/* Leaderboard table header */
+.lb_Table th {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-text-light);
+}
+
+/* Leaderboard table rows */
+.lb_Table tr {
+  background-color: #161618;
+}
+
+/* Leaderboard table cells */
+.lb_Table td {
+  font-size: 18px;
+  color: var(--color-text-light);
+  padding: 2px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-light-dark);
+}
+
+/* Leaderboard table alternating rows */
+.lb_Table tr:nth-child(even) {
+  background-color: #0a0a0b;
+}
+
+@media screen and (max-width: 700px) {
+  .lb_Table th {
+    display: none;
+  }
+
+  .lb_Table td {
+    display: block;
+    padding: .5rem 1rem;
+    text-align: left;
+  }
+
+  .lb_Table td:first-child {
+    padding-top: 1.5rem;
+  }
+
+  .lb_Table td:last-child {
+    padding-bottom: 1.5rem;
+  }
+
+  .lb_Table td::before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
